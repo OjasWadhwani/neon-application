@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import neon from './neon.svg';
 import './App.css';
 
 function App() {
