@@ -22,3 +22,31 @@
 .App-link {
   color: #61dafb;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* left: 100px; */
+  top: 30px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 600px;
+  background-color: transparent black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 1rem;
+  margin-top: 50%;
+  margin-left: -100px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

@@ -1,12 +1,15 @@
 {
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.9.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "graphql": "^16.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "typescript": "^3.9.7",
     "web-vitals": "^3.0.4"
   },
   "scripts": {
@@ -32,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "typescript": "^5.4.3"
   }
 }
