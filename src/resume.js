@@ -2,9 +2,8 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { Document, Page, pdfjs } from 'react-pdf';
 import HyperlinkComponent from './hyperlink';
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
-pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+pdfJS.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.js';
 
 // This function fetches the resume data from your GraphQL endpoint
 const fetchResume = async () => {
