@@ -9,8 +9,8 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <div className="tooltip">
-          <span className="tooltiptext">I hope I don't get sued for this logo</span>
-          <img src={neon} className="Neon-logo" alt="neon" />
+          {/* <span className="tooltiptext">I hope I don't get sued for this logo</span> */}
+          <div className="title"><div className=''><img src={neon} className="neon-logo" alt="neon" /></div><div className='me'> 🤝 &nbsp; <a href="https://www.linkedin.com/in/ojas-wadhwani-99a14315a/"> Ojas</a></div></div>
         </div>
         <div className="description">
           <p>
@@ -28,7 +28,7 @@ const App = () => {
           <p>
             I am enthusiastic about the prospect of contributing to Neon's innovative endeavors and am confident in my ability to make meaningful contributions to your team. Thank you for considering my application. Please find my resume and cover letter below. I am eager to discuss further how my skills align with the objectives of your organization.
           </p>
-          <p>Warm regards, <a href="https://www.linkedin.com/in/ojas-wadhwani-99a14315a/">Ojas</a>. <div className="source"><a href="https://github.com/OjasWadhwani/neon-application">source code</a></div></p>
+          <p>Warm regards, Ojas. <div className="source"><a href="https://github.com/OjasWadhwani/neon-application">source code</a></div></p>
 
         </div>
         <div className='application'>

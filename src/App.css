@@ -4,11 +4,23 @@
   /* Prevent scrolling on the entire page */
 }
 
-.Neon-logo {
-  height: 4vmin;
+.neon-logo {
+  height: 2vmin;
   pointer-events: none;
   margin-top: 1vmin;
   margin-bottom: 5vmin;
+}
+
+.title {
+  font-size: 2vmin;
+  display: flex;
+}
+
+.me {
+  font-size: 1.8vmin;
+  display: flex;
+  margin-top: 0.9vmin;
+  margin-left: 1vmin;
 }
 
 .resume {
