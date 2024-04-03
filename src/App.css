@@ -1,11 +1,18 @@
 .App {
   text-align: center;
+  overflow: hidden;
+  /* Prevent scrolling on the entire page */
 }
 
 .Neon-logo {
   height: 4vmin;
   pointer-events: none;
   margin-top: 1vmin;
+  margin-bottom: 5vmin;
+}
+
+.resume {
+  height: fit-content;
 }
 
 .App-header {
@@ -15,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  font-size: calc(10px + 2vmin);
+  font-size: 15px;
   color: white;
 }
 
@@ -40,8 +47,8 @@
   border-radius: 6px;
   padding: 5px 0;
   font-size: 1rem;
-  margin-top: 50%;
-  margin-left: -100px;
+  margin-top: 40%;
+  margin-left: -110px;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
