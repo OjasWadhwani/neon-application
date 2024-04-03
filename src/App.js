@@ -4,10 +4,6 @@ import CoverViewer from './cover';
 import neon from './neon.svg';
 import './App.css';
 
-var pdflib = require('pdfjs-dist/build/pdf.js');
-import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.js';
-pdflib.GlobalWorkerOptions.workerPort = new pdfjsWorker();
-
 const App = () => {
   return (
     <div className="App">
