@@ -3,8 +3,6 @@ import { useQuery } from 'react-query';
 import { Document, Page } from 'react-pdf';
 import HyperlinkComponent from './hyperlink';
 
-pdfJS.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.js';
-
 // This function fetches the cover letter from your GraphQL endpoint
 const fetchCover = async () => {
     const response = await fetch(process.env.REACT_APP_HASURA_GRAPHQL_ENDPOINT, {
