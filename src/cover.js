@@ -7,8 +7,8 @@ const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.entry');
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
-// This function fetches the resume data from your GraphQL endpoint
-const fetchResume = async () => {
+// This function fetches the cover letter from your GraphQL endpoint
+const fetchCover = async () => {
     const response = await fetch(process.env.REACT_APP_HASURA_GRAPHQL_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -17,8 +17,8 @@ const fetchResume = async () => {
         },
         body: JSON.stringify({
             query: `
-                query GetResume {
-                    files(where: {type: {_eq: "resume"}}) {
+                query Getcover {
+                    files(where: {type: {_eq: "cover"}}) {
                         file_path
                     }
                 }
@@ -27,29 +27,29 @@ const fetchResume = async () => {
     });
 
     if (!response.ok) {
-        throw new Error('Failed to fetch resume data');
+        throw new Error('Failed to fetch cover data');
     }
 
     return response.json();
 };
 
-const ResumeViewer = () => {
-    // Using the useQuery hook to fetch resume data
-    const { isLoading, isError, data, error } = useQuery('resume', fetchResume);
+const CoverViewer = () => {
+    // Using the useQuery hook to fetch cover data
+    const { isLoading, isError, data, error } = useQuery('cover', fetchCover);
 
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: {error.message}</div>;
 
-    const resumeFilePath = data?.data?.files?.[0]?.file_path;
+    const coverFilePath = data?.data?.files?.[0]?.file_path;
 
-    console.log("resumeFilePath", resumeFilePath)
+    console.log("coverFilePath", coverFilePath)
 
     return (
-        <div className="resume-container">
-            <h1>Resume</h1>
+        <div className="cover-container">
+            <h1>Cover Letter</h1>
             <Document
-                file={resumeFilePath}
-                onLoadSuccess={() => console.log('Resume loaded successfully!')}
+                file={coverFilePath}
+                onLoadSuccess={() => console.log('cover loaded successfully!')}
                 onLoadError={(error) => console.error('Failed to load PDF:', error)}
             >
                 <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} />
@@ -58,4 +58,4 @@ const ResumeViewer = () => {
     );
 };
 
-export default ResumeViewer;
+export default CoverViewer;

@@ -1,5 +1,6 @@
 import React from 'react';
 import ResumeViewer from './resume';
+import CoverViewer from './cover';
 import neon from './neon.svg';
 import './App.css';
 
@@ -11,7 +12,10 @@ const App = () => {
           <span className="tooltiptext">I hope I don't get sued for this logo</span>
           <img src={neon} className="Neon-logo" alt="neon" />
         </div>
-        <ResumeViewer />
+        <div className='application'>
+          <ResumeViewer />
+          <CoverViewer />
+        </div>
       </header>
     </div>
   );
