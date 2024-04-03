@@ -4,8 +4,8 @@ import CoverViewer from './cover';
 import neon from './neon.svg';
 import './App.css';
 
-import pdfJS from 'pdfjs-dist/build/pdf.js';
-pdfJS.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.js';
+import * as PDFJS from 'pdfjs-dist/build/pdf.min.mjs';
+PDFJS.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.js';
 
 const App = () => {
   return (
