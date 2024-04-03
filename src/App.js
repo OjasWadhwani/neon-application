@@ -3,6 +3,9 @@ import ResumeViewer from './resume';
 import CoverViewer from './cover';
 import neon from './neon.svg';
 import './App.css';
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const App = () => {
   return (
