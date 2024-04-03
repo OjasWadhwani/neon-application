@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { Document, Page } from 'react-pdf';
+import HyperlinkComponent from './hyperlink';
 
 const pdfjs = await import('pdfjs-dist/build/pdf');
 const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.entry');
@@ -42,18 +43,19 @@ const ResumeViewer = () => {
 
     const resumeFilePath = data?.data?.files?.[0]?.file_path;
 
-    console.log("resumeFilePath", resumeFilePath)
-
     return (
         <div className="resume-container">
             <h1>Resume</h1>
-            <Document
-                file={resumeFilePath}
-                onLoadSuccess={() => console.log('Resume loaded successfully!')}
-                onLoadError={(error) => console.error('Failed to load PDF:', error)}
-            >
-                <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} />
-            </Document>
+            <HyperlinkComponent url={resumeFilePath}>
+                <Document
+                    file={resumeFilePath}
+                    onLoadSuccess={() => console.log('Resume loaded successfully!')}
+                    onLoadError={(error) => console.error('Failed to load PDF:', error)}
+                >
+                    <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} />
+                </Document>
+            </HyperlinkComponent>
+
         </div>
     );
 };
