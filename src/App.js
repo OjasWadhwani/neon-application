@@ -29,6 +29,7 @@ const App = () => {
             It dynamically fetches PDF documents stored within a Google Cloud Storage bucket via links managed in a Neon Postgres database connected through Hasura.
             The frontend, hosted on Vercel, interacts with the GraphQL API provided by Hasura, utilizing <a href="https://tanstack.com/query/latest/docs/framework/react/overview">react-query</a> for efficient data fetching and <a href="https://react-pdf.org/">react-pdf</a> for elegant document display.
           </p>
+          <p>Please find my resume and cover letter for the job application below.</p>
           <p>Warm regards, Ojas. <div className="source"><a href="https://github.com/OjasWadhwani/neon-application">source code</a></div></p>
 
         </div>
