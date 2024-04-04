@@ -4,6 +4,30 @@
   /* Prevent scrolling on the entire page */
 }
 
+.neon-db {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.neon-db .neon-tooltip {
+  visibility: hidden;
+  width: 230px;
+  background-color: #4a4747;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.neon-db:hover .neon-tooltip {
+  visibility: visible;
+}
+
 .neon-logo {
   height: 2vmin;
   pointer-events: none;
